@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    margin-top: 2rem;
+    text-align: center;
+}
+.inputBox{
+ width: 100%;
+margin-top: 2rem;
+ display: flex;
+ justify-content: center;
+ 
+}
+.inputBox input,.inputBox select{
+    width: 25vw;
+    height: 30px;
+    margin: 2px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+.inputBox button{
+  padding: 5px 40px;
+    margin: 2px;
+    color: aqua;
+    background-color: rgb(36, 35, 35);
+    border-radius: 3px;
+    border: none;
+}
+#deleteBtn{
+    padding: 5px 40px;
+    color: black;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+     border-radius: 10px;
+}
+#editBtn{
+    padding: 5px 40px;
+    color:black;
+    background-color: rgb(21, 236, 125);
+    border: none;
+    cursor: pointer;
+     border-radius: 10px;
+}
+#cancleBtn{
+ padding: 5px 40px;
+    color: black;
+    background-color: rgb(89, 0, 255);
+    border: none;
+     cursor: pointer;
+      border-radius: 10px;
+}
+
+#saveBtn{
+     padding: 5px 40px;
+    color: black;
+    background-color: rgb(255, 255, 3);
+    border: none;
+    cursor: pointer;
+     border-radius: 10px;
+}
+
+.table{
+    width: 100%;
+    border-collapse:collapse;
+    font-size: 1rem;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     margin:20px 0px;
+}
+
+.table thead tr{
+    background-color: rgb(95, 94, 94);
+    color: white;
+    text-align: left;
+}
+.table thead th, .table tbody td{
+    padding: 12px 15px;
+    border: 1px solid #282828dd;
+}
+.action{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    white-space: nowrap;
+    padding: 10px;
+}
+.passRow {
+  background-color: #d4edda; 
+  color: #155724;
+}
+
+.failRow {
+  background-color: #f8d7da; 
+  color: #721c24;
+}

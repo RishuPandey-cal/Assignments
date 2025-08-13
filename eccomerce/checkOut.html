@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="checkOut.css" />
+  </head>
+  <body>
+
+    <button class="btn" onclick="previousPage()" >Back</button>
+    <h1>Checkout page</h2>
+    <h2 class="cpm" >Choose Paynment Method</h2>
+    <div class="main">
+      
+
+      <div class="paynment">
+        <div class="card">
+          <div class="left">
+            <div>icon</div>
+            <div class="txt">
+              <p class="paynementHead">Upi Payment</p>
+              <p>pay using Google Pay, PhonePe , Paytm</p>
+            </div>
+          </div>
+          <div class="right">
+            <input type="radio" name="paynmentOption" />
+          </div>
+        </div>
+        <div class="card">
+          <div class="left">
+            <div>icon</div>
+            <div class="txt">
+              <p class="paynementHead" >Debit Card</p>
+              <p>Visa , Mastercard, Rupay</p>
+            </div>
+          </div>
+          <div class="right">
+            <input type="radio" name="paynmentOption" />
+          </div>
+        </div>
+        <div class="card">
+          <div class="left">
+            <div>icon</div>
+            <div class="txt">
+              <p class="paynementHead" >Credit Card</p>
+              <p>Visa , Mastercard, Rupay</p>
+            </div>
+          </div>
+          <div class="right">
+            <input type="radio" name="paynmentOption" />
+          </div>
+        </div>
+        <div class="card">
+          <div class="left">
+            <div>icon</div>
+            <div class="txt">
+              <p class="paynementHead" >Net Banking</p>
+              <p>All major banks supported</p>
+            </div>
+          </div>
+          <div class="right">
+            <input type="radio" name="paynmentOption" />
+          </div>
+        </div>
+        <div id="cardDetailsContainer" class="card-details"></div>
+        <div class="pay" >
+            <button id="payBtn" >Pay$4000</button>
+        </div>
+      </div>
+
+
+
+      <div class="orderSummary">
+        <p class="oSummary">Order Summary</p>
+        <div class="heading">
+          <p>item</p>
+          <p>Premium Subscription</p>
+        </div>
+        <div class="line"></div>
+
+        <div class="prices">
+          <p>SubTotal</p>
+          <p id="SubTotal" >$2000</p>
+        </div>
+        <div class="prices">
+          <p>Discount</p>
+          <p id="discountitem" >$300</p>
+        </div>
+        <div class="line"></div>
+        <div class="prices">
+          <p>Total</p>
+          <p id="total">$3000</p>
+        </div>
+      </div>
+    </div>
+    <script src="checkOut.js" ></script>
+  </body>
+</html>

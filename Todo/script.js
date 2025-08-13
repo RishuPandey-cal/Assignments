@@ -18,6 +18,7 @@ function showList(){
     
     getReport();
       let show = document.querySelector(".show")
+      console.log(show);
 
     show.innerHTML= user.map((item,index)=>{
         if(editId===item.id){

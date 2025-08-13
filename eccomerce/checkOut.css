@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+.main{
+     display: flex;
+     gap: 5rem;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-items: center;
+}
+.btn{
+    padding: 10px 30px;
+    color: white;
+    background-color: black;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+h1{
+    margin-bottom: 10px;
+    margin-top: 12px;
+    text-align: center;
+}
+.cpm{
+     margin-bottom: 7px;
+    margin-top: 12px;
+    margin-left: 10%;
+}
+.paynment{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.paynementHead{
+    font-size: large;
+    font-weight: bold;
+}
+.card{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    min-width: 450px;
+    width: 35vw;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgb(248, 248, 248);
+}
+
+.pay button{
+    min-width: 450px;
+    width: 35vw;
+    height: 35px;
+    background-color: rgb(84, 84, 249);
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+.pay button:hover{
+  background-color: rgb(48, 48, 248);
+}
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+}
+.orderSummary{
+    border: 1px solid black;
+    width: fit-content;
+    padding: 15px 12px;
+    height: fit-content;
+     background-color: rgb(248, 248, 248);
+     border-radius: 15px;
+}
+.oSummary{
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 10px;
+}
+.line{
+    height:1px;
+    border: 1px solid rgb(65, 65, 65);
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+.prices{
+    display: flex;
+     align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 10px;
+}
+@media(max-width:471px){
+  .card{
+     width: 90vw;
+   min-width: 270px;
+  }
+  .main{
+      gap: 2rem;
+}
+.pay button{
+   min-width: 90vw;
+}
+}
+
+
+
+.card-details {
+    margin: 15px 0;
+}
+
+.card-form {
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.card-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.card-form input, .card-form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.submit-btn {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background: #218838;
+}

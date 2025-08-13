@@ -3,15 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+     overflow: hidden;
+}
 h2{
     margin-top: 2rem;
     text-align: center;
 }
 .inputBox{
- width: 100%;
+ /* width: 100%; */
 margin-top: 2rem;
  display: flex;
- justify-content: center;
+ justify-content: end;
+ /* margin-left:240px; */
  
 }
 .inputBox input,.inputBox select{
@@ -64,11 +68,12 @@ margin-top: 2rem;
 }
 
 .table{
-    width: 100%;
+    width: 80%;
     border-collapse:collapse;
     font-size: 1rem;
      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
      margin:20px 0px;
+    margin: auto;
 }
 
 .table thead tr{
@@ -95,4 +100,7 @@ margin-top: 2rem;
 .failRow {
   background-color: #f8d7da; 
   color: #721c24;
+}
+#addBtn{
+    cursor: pointer;
 }

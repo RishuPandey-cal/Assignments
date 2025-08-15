@@ -2,8 +2,11 @@ let priceStore={};
 let cart = JSON.parse(localStorage.getItem("cart"))|| [];
 
 function displayCart() {
-    const main = document.querySelector(".main");
-    const totalEl = document.querySelector(".showPrice");
+    let main = document.querySelector(".main");
+    let totalEl = document.querySelector(".showPrice");
+    let checkoutBtn=document.querySelector(".checkoutBtn");
+    let emptyCart=document.querySelector(".emptyCart");
+
     main.innerHTML = "";
 
     let totalPrice = 0;
@@ -53,7 +56,10 @@ totalPrice+=pricePerProduct;
                   priceStore.tDiscount=totalDiscount;
                   priceStore.tFinal=totalPrice-totalDiscount;
                   store();
-
+      if(cart.length===0){
+        checkoutBtn.style.display="none";
+        emptyCart.innerText="Your Cart is Empty";
+      }
 }
 
 function store(){

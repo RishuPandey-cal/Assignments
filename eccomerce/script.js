@@ -7,6 +7,7 @@ updateCartCount();
 
 let show=document.querySelector(".main");
 let pagination=document.querySelector(".pagination");
+let emptyList=document.querySelector(".emptyList");
 
    async function fetchData(){
     
@@ -28,6 +29,14 @@ function renderProducts(){
     let end=start+itemPerPage;
 
     let currentProduct=filteredProducts.slice(start,end);
+   
+    if(currentProduct.length===0){
+     
+     emptyList.innerHTML=`<h2>No product Found</h2>`;
+     emptyList.style.fontSize="2rem";
+     emptyList.style.textAlign="center";
+
+    }
 
  show.innerHTML=currentProduct.map((item,index)=>{
     return`

@@ -8,7 +8,7 @@ body{
 }
 .main{
      display: flex;
-     gap: 5rem;
+     gap: 4rem;
      flex-wrap: wrap;
      justify-content: center;
      align-items: center;
@@ -34,7 +34,9 @@ h1{
 .cpm{
      margin-bottom: 7px;
     margin-top: 12px;
-    margin-left: 10%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 .paynment{
     display: flex;
@@ -56,19 +58,6 @@ h1{
     border-radius: 8px;
     cursor: pointer;
     background-color: rgb(248, 248, 248);
-}
-
-.pay button{
-    min-width: 450px;
-    width: 35vw;
-    height: 35px;
-    background-color: rgb(84, 84, 249);
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-}
-.pay button:hover{
-  background-color: rgb(48, 48, 248);
 }
 .left{
     display: flex;
@@ -129,25 +118,25 @@ h1{
 
 
 
-.card-details {
+.cardDetails {
     margin: 15px 0;
 }
 
-.card-form {
+.cardForm {
     background: #f9f9f9;
     padding: 15px;
     border: 1px solid #ddd;
     border-radius: 8px;
 }
 
-.card-form label {
+.cardForm label {
     display: block;
     margin-top: 10px;
     font-weight: bold;
     font-size: 14px;
 }
 
-.card-form input, .card-form select {
+.cardForm input, .cardForm select {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
@@ -156,7 +145,7 @@ h1{
     font-size: 14px;
 }
 
-.submit-btn {
+.submitBtn {
     background: #28a745;
     color: white;
     padding: 10px;
@@ -168,6 +157,6 @@ h1{
     font-size: 16px;
 }
 
-.submit-btn:hover {
+.submitBtn:hover {
     background: #218838;
 }

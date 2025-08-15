@@ -68,8 +68,10 @@ function removeItem(index) {
     displayCart();
 }
 
-document.querySelector(".checkoutBtn").addEventListener("click", () => {
+
+
+function migrate(){
     window.location.href="checkOut.html"
-});
+}
 
 displayCart();

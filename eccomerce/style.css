@@ -138,7 +138,7 @@ padding: 8px;
 }
 .pagination button {
     background-color: white;
-    border: none;
+    border: 1px solid black;
     color: black;
     padding: 8px 14px;
     border-radius: 6px;
@@ -147,11 +147,16 @@ padding: 8px;
     transition: all 0.2s ease;
 }
 #cartCount{
-    color: blue;
+    color: rgb(136, 136, 248);
     font-weight: bolder;
     font-size: larger;
     position: absolute;
     right: 15;
+}
+.pagination button.active{
+    background-color: rgb(20, 107, 247);
+    color: white;
+    font-weight: bold;
 }
 
 #cartLogo{

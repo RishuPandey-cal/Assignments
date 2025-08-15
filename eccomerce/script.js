@@ -15,6 +15,7 @@ let pagination=document.querySelector(".pagination");
      console.log(data.products[0]);
       products=data.products;
       filteredProducts=[...products];
+      console.log(filteredProducts[0])
      renderProducts();
      renderPagination();
 
@@ -70,7 +71,7 @@ function renderPagination(){
     pagination.innerHTML="";
 
     for(let i=1;i<=totalPage;i++){
-        pagination.innerHTML+=`<button onclick="changePage(${i})">${i}</button>`;
+        pagination.innerHTML+=`<button class="${i===currentPage?"active":''}"  onclick="changePage(${i})">${i}</button>`;
     }
 
 }
@@ -78,6 +79,7 @@ function renderPagination(){
 function changePage(page){
     currentPage=page;
     renderProducts();
+    renderPagination();
 }
 
  
@@ -112,8 +114,12 @@ document.querySelectorAll("#categoryFilter").forEach(dropdown => {
         if (!cat) {
             filteredProducts = [...products];
         } else {
+         
             filteredProducts = products.filter(item => 
-                item.category.toLowerCase() === cat.toLowerCase()
+                item.category.toLowerCase() === cat.toLowerCase() ||
+                item.category.toLowerCase().includes(cat.toLowerCase()) || 
+                item.title.toLowerCase().includes(cat.toLowerCase()) ||
+                item.description.toLowerCase().includes(cat.toLowerCase())
             );
         }
 

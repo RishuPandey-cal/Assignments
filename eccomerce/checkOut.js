@@ -11,18 +11,18 @@ function load(){
     paymentOptions.forEach((option, index) => {
         option.addEventListener("change", () => {
             let formHTML = "";
-            if (index === 0) { 
+            if (option.value === "upi") { 
                 formHTML = `
-                    <div class="card-form">
+                    <div class="cardForm">
                         <label>UPI ID</label>
                         <input type="text" id="upiId" placeholder="example@upi" />
-                        <button class="submit-btn" onclick="validateUpi()">Submit</button>
+                        <button class="submitBtn" onclick="validateUpi()">pay $${finalPrices.toFixed(2)}</button>
                     </div>
                 `;
             }
-            else if (index === 1 || index === 2) { 
+            else if (option.value ==="dc"  || option.value === 'cc') { 
                 formHTML = `
-                    <div class="card-form">
+                    <div class="cardForm">
                         <label>Card Number</label>
                         <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="16" />
 
@@ -30,18 +30,18 @@ function load(){
                         <input type="text" id="cardName" placeholder="John Doe" />
 
                         <label>Expiry Date</label>
-                        <input type="month" id="expiryDate" />
+                        <input type="month" id="expiryDate" placeholder="Expiry" />
 
                         <label>CVV</label>
                         <input type="password" id="cvv" placeholder="123" maxlength="3" />
 
-                        <button class="submit-btn" onclick="validateCard()">Submit</button>
+                        <button class="submitBtn" onclick="validateCard()">pay $${finalPrices.toFixed(2)}</button>
                     </div>
                 `;
             }
-            else if (index === 3) { 
+            else if (option.value === 'netbanking') { 
                 formHTML = `
-                    <div class="card-form">
+                    <div class="cardForm">
                         <label>Select Bank</label>
                         <select id="bankName">
                             <option value="">-- Select Bank --</option>
@@ -56,7 +56,7 @@ function load(){
                         <label>Password</label>
                         <input type="password" id="netPassword" placeholder="Enter Password" />
 
-                        <button class="submit-btn" onclick="validateNetBanking()">Submit</button>
+                        <button class="submitBtn" onclick="validateNetBanking()">pay $${finalPrices.toFixed(2)}</button>
                     </div>
                 `;
             }
@@ -89,7 +89,7 @@ function validateCard() {
         alert("Card number must be 16 digits.");
         return false;
     }
-    if (name.length < 3) {
+    if (name.length < 3  ) {
         alert("Name must be at least 3 characters.");
         return false;
     }
@@ -124,7 +124,7 @@ function validateNetBanking() {
     alert("Net Banking Payment Successful!");
 }
 let obj= JSON.parse(localStorage.getItem("price"));
-console.log(obj)
+
 
 function showPrice(){
 let obj= JSON.parse(localStorage.getItem("price"));
@@ -148,7 +148,6 @@ let discount=document.querySelector("#discountitem");
 
  let total=document.querySelector('#total');
  total.innerHTML=`$${finalPrices.toFixed(2)}`
-
 }
 
 showPrice();
